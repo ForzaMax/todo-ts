@@ -1,0 +1,16 @@
+.task__list {
+  border-top: 1px solid #dee2e6;
+padding: 32px 24px 32px 24px;
+  margin-top: 24px;
+  list-style: none;
+  gap: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-sizing: content-box;
+  max-height: 321px;
+  overflow-y: scroll;
+
+  overflow-x: hidden;
+}

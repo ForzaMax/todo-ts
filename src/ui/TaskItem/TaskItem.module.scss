@@ -1,0 +1,88 @@
+.task {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__checkbox {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    opacity: 0;
+
+    &:checked + .task__text {
+      color: #54595e7f;
+      color: rgba(#54595e7f, 0.5);
+      text-decoration: line-through;
+    }
+
+    &:checked + .task__text::before {
+      cursor: pointer;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      width: 16px;
+      height: 16px;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTYnIGhlaWdodD0nMTYnIHZpZXdCb3g9JzAgMCAxNiAxNicgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cmVjdCB3aWR0aD0nMTYnIGhlaWdodD0nMTYnIHJ4PScyJyBmaWxsPScjNzc0OUY4Jy8+PHBhdGggZD0nTTEyIDVMNi41IDEwLjVMNCA4JyBzdHJva2U9J3doaXRlJyBzdHJva2Utd2lkdGg9JzInIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCcvPjwvc3ZnPgo=");
+    }
+  }
+
+  &__text {
+    margin-left: 16px;
+    color: var(--secondary-dark-color, #54595e);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+
+    &::before {
+      cursor: pointer;
+      content: "";
+      width: 16px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      height: 16px;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxNicgaGVpZ2h0PScxNicgdmlld0JveD0nMCAwIDE2IDE2JyBmaWxsPSdub25lJz48cmVjdCB4PScwLjUnIHk9JzAuNScgd2lkdGg9JzE1JyBoZWlnaHQ9JzE1JyByeD0nMS41JyBmaWxsPSd3aGl0ZScgc3Ryb2tlPScjQUJCNUJFJy8+PC9zdmc+");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__btn {
+    &_edit {
+      margin-left: auto;
+      margin-right: 16px;
+
+      border: none;
+      background: none;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    &_delete {
+      border: none;
+      background: none;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+  }
+}
